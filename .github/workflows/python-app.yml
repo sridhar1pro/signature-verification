@@ -27,6 +27,9 @@ jobs:
           pip install opencv-python==4.7.0.72
           pip install pillow==12.0.0
 
+      - name: Add src to PYTHONPATH
+        run: echo "PYTHONPATH=$(pwd)/src" >> $GITHUB_ENV
+
       - name: Lint
         run: |
           pip install flake8
@@ -36,8 +39,12 @@ jobs:
         run: |
           python - << 'EOF'
           print("Demo script imported successfully!")
-          from preprocess import *
-          from features import *
-          from greedy import *
-          from dtw_dp import *
+
+          # Correct imports from src/
+          from preprocess import preprocess_image
+          from features import contour_to_points
+          from greedy import greedy_score
+          from dtw_dp import dtw_distance
+
+          print("All modules imported successfully!")
           EOF

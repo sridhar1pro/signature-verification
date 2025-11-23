@@ -1,4 +1,4 @@
-<# Signature Verification System  
+# Signature Verification System  
 ![CI Status](https://github.com/sridhar1pro/signature-verification/actions/workflows/python-app.yml/badge.svg)
 
 Offline signature verification implemented in Python using OpenCV + Dynamic Programming (DTW) + greedy matching.

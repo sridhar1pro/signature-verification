@@ -21,7 +21,7 @@ Offline signature verification implemented in Python using OpenCV + Dynamic Prog
 ## Quick Start (Windows PowerShell)
 
 ```powershell
-cd your project patht\signature_verification
+cd your project path\signature_verification
 venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 
